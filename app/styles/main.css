@@ -1,0 +1,407 @@
+body
+{
+    background-image:url(../images/login2.jpg);
+/*    height: 100%;*/
+    background-color: darkgray;
+    background-size: cover;
+/*
+    background-repeat: no-repeat;
+   
+*/
+}
+
+.head
+{
+    width:100%;
+    text-align: center;
+    background-image: url(../images/header-background.jpg);
+    height: auto;
+/*    background-position: center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.head img
+{
+    top:0;
+    left:0;
+    float:left;
+    padding: 20px;
+    width: 100px;
+    
+}
+#a, #z
+{
+    color:crimson;
+}
+.head h2
+{
+    float: center;
+    font-size: 40px;
+    color:darkorange;
+	font-family: 'Helvetica Neue';
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+
+}
+.login
+{
+    
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    padding:20px;
+    text-align: center;
+    border: 0px;
+    color: #fff;
+    background: url("../images/login-back.jpg") no-repeat ;
+    background-size: cover;
+    width: 400px;
+    height: auto;
+}
+
+.login h1
+{
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+#uname,#pwd
+{
+    margin-top: 25px;
+    border: 2px solid #d9d9d9;
+    border-width: inherit;
+    height: 30px;
+    width: 70%;
+    color: black;
+
+}
+ .login button
+{ background-color: cornflowerblue;
+  border:0;
+    border-radius: 3px;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  width:100px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+
+@media screen and (min-width:550px) and (max-width: 800px)
+    {
+.head h2
+    {
+        font-size: 25px;
+    }
+.head img
+        {
+            width: 70px;
+        }
+.login h1
+        {
+         font-size: 20px;   
+        }
+.login
+        {
+            width:40%;
+            padding: 10px;
+    }
+.login button
+        {
+            padding:5px;
+            font-size:10px;
+            width:50px;
+        }
+    }
+
+@media screen and (max-width:550px)
+    {
+        .head img
+        {
+            width: 40px;
+            padding: 5px;
+        }
+        .head h2
+        {
+            font-size: 15px;
+        }
+        .login h1
+        {
+         font-size: 15px;
+            padding: 0px;
+        }
+        .login
+        {
+            margin-left: 20%;
+            width:65%;
+            padding: 3px;
+        }
+        .login button
+        {
+            padding:5px;
+            font-size:10px;
+            width:50px;
+        }
+        #uname,#pwd
+        {
+            width: 90%;
+            height: 20px;
+            padding: 0px;
+        }
+    }
+#about
+{
+    margin-right: 3%;
+    margin-left: 3%;
+}
+.cmp img
+{
+    width:20%;
+    margin-top: 40px;
+    height:150px;
+    float: left;
+}
+.cmp
+{
+    width:45%;
+    height: auto;
+    float:left;
+    margin: 15px;
+    padding: 5px;
+    color: #dbd3cd;
+    text-align: center;
+    border: 10px solid gray;
+    border-radius: 15px;
+}
+
+.cmp h3
+{
+    background-color: #0ab4eb;
+    padding: 10px;
+}
+
+.cmp p
+{
+    width: 75%;
+    font-family: monospace;
+    text-align: justify;
+    font-size: 15px;
+    color: #fff2f2;
+    float: right;
+    margin:5px;
+}
+
+#details
+{
+    width: 60%;
+    background:  url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+    margin:50px;
+    margin-left: 25%;
+    border-radius: 20px;
+    
+}
+
+#details h2
+{
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+    text-decoration-line: underline;
+    text-decoration-color: floralwhite;
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+    text-decoration-line: underline;
+    padding: 10px;
+}
+
+#details h3
+{
+    color: #D8D8D8;
+    margin-left: 120px;
+    font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	}
+
+#details label
+{
+    margin-left:80px;
+    color: #F7D511;
+    font-family: 'Helvetica Neue';
+	font-size: 24px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+}
+
+
+
+#details p
+{
+    margin-left: 120px;
+    color: #D8D8D8;
+    font-size: 22px;
+}
+
+@media screen and (min-width:550px) and (max-width: 800px)
+{
+    .cmp img
+{
+    margin-top: 20px;
+    height:100px;
+}
+.cmp
+{
+    height: auto;
+    float:left;
+    margin: 15px;
+    padding: 5px;
+    color: chocolate;
+    text-align: center;
+    border: 5px solid gray;
+    border-radius: 15px;
+}
+
+.cmp h3
+{
+    font-size: 15px;
+    background-color: #0404B4;
+    padding: 5px;
+}
+
+.cmp p
+{
+    font-size: 10px;
+    color: #585858;
+    float: right;
+    margin:5px;
+}
+
+#details
+{
+    margin:30px;
+    
+}
+
+#details h2
+{
+    font-size: 15px;
+    text-align: center;
+    background-color: darkblue;
+    color: crimson;
+    padding: 5px;
+}
+
+#details h3
+{
+    color: gray;
+    margin-left: 15%;
+    font-size: 10px;
+    
+}
+
+#details label
+{
+    margin-left:10%;
+    color: #F7D511;
+    font-family: 'Helvetica Neue';
+	font-size: 12px;
+}
+
+#details h3 button
+{
+    width:auto;
+    padding: 10px;
+    background-color: crimson;
+    color: cornsilk;
+}
+
+#details p
+{
+    margin-left: 15%;
+}
+
+    
+}
+
+
+@media screen and (max-width:550px)
+{
+    .cmp img
+{
+    margin-top: 10px;
+    height:40px;
+    width: 12%;
+}
+.cmp
+{
+    height: auto;
+    float:left;
+    margin: 25px;
+    margin-left: 12%;
+    padding: 5px;
+    text-align: center;
+    border: 5px solid gray;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.cmp h3
+{
+    font-size: 10px;
+    padding: 5px;
+}
+
+.cmp p
+{
+    font-size: 10px;
+    float: right;
+    margin:5px;
+}
+
+#details
+{
+    margin:30px;
+    margin-left: 20%;
+    width:auto;
+    
+}
+
+#details h2
+{
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+#details h3
+{
+    margin-left: 15%;
+    font-size: 10px;
+    
+}
+
+#details label
+{
+    margin-left:10%;
+    font-size: 12px;
+}
+
+#details p
+{
+    margin-left: 15%;
+    font-size: 10px;
+    
+}
+
+    
+} 
+    
+
