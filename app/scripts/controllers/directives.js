@@ -12,6 +12,6 @@ angular
         restrict: 'A',
         replace: true,
         scope: {},
-        template: ' <div><p ng-message="required">Data required.</p><p ng-message="minlength">Too short.</p><p ng-message="maxlength">Too long.</p></div>'          
+        templateUrl: 'views/message.html'         
         };
 });
