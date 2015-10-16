@@ -8,10 +8,10 @@ angular
 .directive("messages",function() {
     "use strict";
     return {
-        require: '^?ngMessages',
+        require: "^myform",
         restrict: 'A',
-        scope: true,
-        template: ' <p ng-message="required">Data required.</p><p ng-message="minlength">Too short.</p><p ng-message="maxlength">Too long.</p>',
-        controller: 'appCntrl'       
+        replace: true,
+        scope: {},
+        template: ' <div><p ng-message="required">Data required.</p><p ng-message="minlength">Too short.</p><p ng-message="maxlength">Too long.</p></div>'          
         };
 });
