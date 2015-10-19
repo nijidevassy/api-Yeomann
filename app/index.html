@@ -15,8 +15,8 @@
         <tr>
             <td><img src="../app/images/logo.jpg"></td>
 <td style="width:100%"><h2><b id="a"> A</b> 2 <b id="z"> Z</b> GROUP OF COMPANIES</h2></td>
-            <td style="float:right;padding:10%"><button class="btn-primary" style="padding:5px" ng-click = "$location.path('/')"> LOGOUT </button></td>
-            
+            <td style="float:right;padding:10%">
+ <button type="submit" class="btn-primary" style="padding:5px"  ng-controller='appCntrl as ap' ng-show="apiService.logged = true"  ng-click="ap.logout()">SIGN OUT</button></td>           
             </tr>
         </table>
 </div>
@@ -38,7 +38,7 @@
       
         <script src="scripts/controllers/appCntrl.js"></script>
         <script src="scripts/controllers/detailCntrl.js"></script>
-      
+        <script src="scripts/controllers/directives.js"></script>
         <script src="scripts/service/service.js"></script>
       <script src="scripts/service/state.js"></script>
         <!-- endbuild -->

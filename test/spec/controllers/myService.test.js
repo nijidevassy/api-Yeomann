@@ -1,7 +1,7 @@
 'use strict';
 
   describe('myService', function() {
-
+     
     var myService, $httpBackend, service;
       beforeEach(module('apiYeomanApp'));
       beforeEach(function(){
@@ -12,55 +12,48 @@
           })
       });
 
-      describe('details()#',function(){
       
-      it('expect service.details() to make API call ',inject(function(myService){
+       describe('details()#',function(){
+      it('expect service.details() to make API call ', function(){
           
-          
-//           var successCallback = sinon.spy();
-          
-//        $httpBackend.expectGET(url).respond(200, 'mock data');
-//        $http.get(url).success(successCallback);
-           // callback called only after flush
-          $httpBackend.when('GET', "http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data")
-                            .respond({
-                user: 'mock data'
+          $httpBackend.when('GET', 'http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data')
+                            .respond(function(){
+              service = {user: 'mock data'};
+              return service;
             });
           
-          
-//        expect(successCallback).not.to.have.been.called;
-        var result =  myService.details('http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data')
-        result.then(function(user){
-            expect(result.user).to.equal('mock data');
-            console.log(user);
-        })
-        // flush response
-        $httpBackend.flush();
-        
-        // Verify expectations
-        // Actual response is  [ 'mock data', 200, Function, { method : 'GET', url : '/path/to/resource' } ]
-          
-          
-          
-//        expect(successCallback.mostRecentCall.args).toContain('mock data');
-//        expect(successCallback.mostRecentCall.args[1]).toBe(200);        
-    }));
+        myService.details('http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data');
+            $httpBackend.flush();
+            expect(service.user).to.equal('mock data');
       });
-          
-//          $httpBackend.whenJSONP("http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data")
-//            .respond({
-//            data : "test";
-//            });
-//          
-//          var result = myService.details("test");
-
-//            $httpBackend.flush();
-//
-//            expect(result.data).to.equal("test");
-//          }));
-//      it('set default params',function(){
-//          expect(service.itemClicked).to.equal("");
-//      });
+       });
+       
+      describe('itemclick and images[]',function(){
+           it('checks whether images[] has value set',function(){
+               expect(myService.images).to.exist;
+           });
+           it('checks whether itemclicked has value',function(){
+               myService.itemClicked = 1;
+               expect(myService.itemClicked).to.equal(1);
+           });
+       });
+      
+ 
   });
+
+    describe('apiService', function() {
+        var apiService;
+        beforeEach(module('apiYeomanApp'));
+        beforeEach(function(){
+          angular.mock.inject(function ($injector) {
+              apiService = $injector.get('apiService');
+          })
+      });
+        it('check default values',function() {
+            expect(apiService.username).to.equal("company");
+            expect(apiService.password).to.equal("1234");
+            expect(apiService.logged).to.equal("false");
+        });
+});
 
          

@@ -7,7 +7,7 @@ angular.module('apiYeomanApp')
         .state('login', {
             url: "/",
             templateUrl : "views/login.html",
-            controller : 'appCntrl'
+            controller : 'appCntrl as ap'
         })
         .state('about', {
             url: "/about",
@@ -17,7 +17,7 @@ angular.module('apiYeomanApp')
         .state('details', {
             url: "/details",
             templateUrl : 'views/details.html',
-            controller  : 'detailsCntrl'
+            controller  : 'detailsCntrl as detail'
         });
 
 });

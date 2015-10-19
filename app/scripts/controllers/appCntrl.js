@@ -10,15 +10,30 @@
 angular
   .module('apiYeomanApp')
 
-.controller('appCntrl', ['$scope', '$location','apiService', function ($scope, $location, apiService) {
-    "use strict";
-    $scope.login = function () {
-        if ($scope.username === apiService.username  && $scope.password === apiService.password) {
+.controller('appCntrl', ['$scope', '$location','apiService', function($scope, $location, apiService) {
+    (function init(vm) {
+        function login() {
+        if (vm.username === apiService.username  && vm.password === apiService.password) {
             apiService.logged = "true";
             $location.path('/about');
         } else {
             $scope.msg = "failed to authenticate";
         }   
     };
-   
+        angular.extend(vm, {
+            login:login,
+            logout:logout 
+        });
+       
+  console.log(vm.username);
+    
+    
+   function logout () {
+        apiService.logged = "false";
+        return $location.path('/');
+    }
+        
+        
+    }(this));
 }]);
+

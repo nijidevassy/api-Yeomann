@@ -17,6 +17,7 @@ angular.module('apiYeomanApp')
     }  
     });
     
+    
     $scope.detail = [];
     myService.details("http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data");
     $scope.data = myService;

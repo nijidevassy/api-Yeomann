@@ -170,7 +170,7 @@ body
 .cmp
 {
     width:45%;
-    height: auto;
+    height: 350px;
     float:left;
     margin: 15px;
     padding: 5px;
@@ -178,6 +178,7 @@ body
     text-align: center;
     border: 10px solid gray;
     border-radius: 15px;
+   
 }
 
 .cmp h3
@@ -195,6 +196,18 @@ body
     color: #fff2f2;
     float: right;
     margin:5px;
+    
+}
+.cmp, .cmp p
+{
+    overflow: hidden;    
+}
+
+.cmp:hover , .cmp p:hover
+{
+    text-overflow: ellipsis;
+    height: auto;
+    overflow: visible;
 }
 
 #details
