@@ -22,14 +22,14 @@ describe('appCntrl', function () {
     describe('Checking default params',function () {
       beforeEach(inject(function($controller,$rootScope){
         scope = $rootScope.$new();
-          scope.username = "company";
-          scope.password = "1234";
+          appCntrl.username = "company";
+          appCntrl.password = "1234";
           appCntrl = $controller('appCntrl', {
           $scope:scope,
           $location:locationMock,
         });  
           it("Check whether the login function navigates",function(){
-            scope.login();
+            appCntrl.login();
               expect(locationMock.path.calledOnce)
           })
         

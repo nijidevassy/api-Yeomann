@@ -37,18 +37,18 @@ describe('detailsCntrl', function () {
         it('Should have valid company name', function(){
             apiServiceMock.logged = 'true';
             scope.$digest();
-            expect(scope.companyName).to.exist;
+            expect(detailsCntrl.companyName).to.exist;
             expect(myServiceMock.itemClicked).to.equal(0);
-            expect(scope.current).to.equal(myServiceMock.itemClicked);
-            expect(scope.name).to.equal(scope.companyName[0].details.company);
+            expect(detailsCntrl.current).to.equal(myServiceMock.itemClicked);
+            expect(detailsCntrl.name).to.equal(detailsCntrl.companyName[0].details.company);
             
-            expect(scope.stockleft).to.equal(scope.companyName[0].details.stockLeft);
-            expect(scope.buylimit).to.equal(scope.companyName[0].details.buyLimit);
-            expect(scope.summary).to.equal(scope.companyName[0].details.summery);
+            expect(detailsCntrl.stockleft).to.equal(detailsCntrl.companyName[0].details.stockLeft);
+            expect(detailsCntrl.buylimit).to.equal(detailsCntrl.companyName[0].details.buyLimit);
+            expect(detailsCntrl.summary).to.equal(detailsCntrl.companyName[0].details.summery);
             
-            expect(scope.id).to.equal(scope.companyName[0].id);
-            expect(scope.title).to.equal(scope.companyName[0].title);
-            expect(scope.cost).to.equal(scope.companyName[0].cost);
+            expect(detailsCntrl.id).to.equal(detailsCntrl.companyName[0].id);
+            expect(detailsCntrl.title).to.equal(detailsCntrl.companyName[0].title);
+            expect(detailsCntrl.cost).to.equal(detailsCntrl.companyName[0].cost);
         });
     });
     
