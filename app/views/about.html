@@ -1,10 +1,11 @@
 <div id="about">
     <div id="search">
             <div id="input-box">           
-                    <input type='text' placeholder="Search by Company Name" autofocus ng-model="searchTerm" class="form-control"></div>
+                    <input type='text' placeholder="Search by Company Name" autofocus ng-model="searchTerm" class="form-control">
+            </div>
     </div>   
-   <div ng-repeat = "img in data.images">
-       <div class="cmp" ng-repeat = "cmp in data.data| filter :searchTerm" ng-click= "go('/details',$index)" >
+   <div ng-repeat = "img in about.data.images">
+       <div class="cmp" ng-repeat = "cmp in about.data.data| filter :searchTerm" ng-click= "about.go('/details',$index)" >
             <h3>{{cmp.details.company}}</h3><br>
             <img ng-src = {{img}} />
     <!--    <img src="assets/images/Company.png"/>-->

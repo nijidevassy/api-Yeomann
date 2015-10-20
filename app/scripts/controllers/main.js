@@ -8,25 +8,28 @@
  * Controller of the apiYeomanApp
  */
 angular.module('apiYeomanApp')
-.controller('mainCntrl', ["myService", 'apiService','$scope', '$location', function (myService, apiService, $scope, $location) {
+    .controller('mainCntrl', ["myService", 'apiService', '$scope', '$location', function (myService, apiService, $scope, $location) {
 
-    "use strict";
-    $scope.$watch(function() { return $location.path(); }, function(newValue, oldValue){  
-    if (apiService.logged === "false" && newValue != '/'){  
-            $location.path('/');  
-    }  
-    });
+        (function init(vm) {
+            $scope.$watch(function () { return $location.path(); }, function (newValue, oldValue) {
+                if (apiService.logged === "false" && newValue !== '/') {
+                    $location.path('/');
+                }
+            });
     
-    
-    $scope.detail = [];
-    myService.details("http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data");
-    $scope.data = myService;
-    
-    $scope.detail = $scope.data.data;
-    $scope.go = function (path, index) {
-        $location.path(path);
-        myService.itemClicked = index;
-    };
+            angular.extend(vm, {
+                go: go
+            });
+            
+            vm.detail = [];
+            myService.details("http://nodejs-qbjsstudy.rhcloud.com/api/get_shop_data");
+            vm.data = myService;
 
-}]);
+            vm.detail = vm.data.data;
+            function go(path, index) {
+                $location.path(path);
+                myService.itemClicked = index;
+            }
+        }(this));
+    }]);
   

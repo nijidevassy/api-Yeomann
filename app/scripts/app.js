@@ -9,8 +9,8 @@
  * Main module of the application.
  */
 angular
-  .module('apiYeomanApp', [
-    'ngMessages',
-    'ngResource',
-    'ui.router'
-  ]);
+    .module('apiYeomanApp', [
+        'ngMessages',
+        'ngResource',
+        'ui.router'
+    ]);

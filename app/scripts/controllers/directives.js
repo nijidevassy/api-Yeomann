@@ -6,8 +6,7 @@
 angular
   .module('apiYeomanApp')
 .directive("messages",function() {
-    "use strict";
-    return {
+      return {
         require: "^myform",
         restrict: 'A',
         replace: true,

@@ -17,23 +17,19 @@ angular
             apiService.logged = "true";
             $location.path('/about');
         } else {
-            $scope.msg = "failed to authenticate";
-        }   
-    };
+            vm.msg = "failed to authenticate";
+        }
+        };
+        
         angular.extend(vm, {
             login:login,
             logout:logout 
         });
-       
-  console.log(vm.username);
-    
-    
-   function logout () {
-        apiService.logged = "false";
-        return $location.path('/');
-    }
         
-        
+        function logout () {
+            apiService.logged = "false";
+            return $location.path('/');
+        }  
     }(this));
 }]);
 

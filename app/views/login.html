@@ -4,34 +4,20 @@
         <input id="uname" type="username" name="uname" ng-model="ap.username" placeholder="Username" ng-minlength="3" 
         ng-maxlength="8" required autofocus>
             
-            <div ng-messages="myform.uname.$error" ng-show="myform.uname.$touched">
-                <div messages></div>
-<!--                        <p ng-message="required">Data required.</p>
-                        <p ng-message="minlength">Too short.</p>
-                        <p ng-message="maxlength">Too long.</p>
-                
-                
-                 <div ng-messages-include = 'pages/messages.html'></div>  
--->            
-            </div>
+        <div ng-messages="myform.uname.$error" ng-show="myform.uname.$touched">
+            <div messages></div>  
+        </div>
 
             
         <input id="pwd" type="password" name="pwd" ng-model='ap.password' placeholder="Password" ng-minlength="3" 
         ng-maxlength="8" required>
             <span ng-messages="myform.pwd.$error" ng-show="myform.pwd.$touched">
                 <div messages></div>
-<!--
-                
-                        <p ng-message="required">Data required.</p>
-                        <p ng-message="minlength">Too short.</p>
-                        <p ng-message="maxlength">Too long.</p>
--->
             </span>
             
-        
             <button name="log"  ng-click = "ap.login()">SIGN IN</button>
             <span ng-bind="ap.msg"> </span>
         </form>   
         
-    </div>
+</div>
     
