@@ -26,12 +26,12 @@ describe('mainCntrl',function () {
     }); 
     
     it('check whether scope.data gets value of myService',function(){
-        expect(scope.data).to.be.equal(myServiceMock);
-        expect(scope.detail).to.equal(myServiceMock.data);
+        expect(mainCntrl.data).to.be.equal(myServiceMock);
+        expect(mainCntrl.detail).to.equal(myServiceMock.data);
     });
     
     it('go()#',function(){
-        scope.go('/',0);
+        mainCntrl.go('/',0);
         expect(locationMock.path.calledWith('/')).to.be.true;
         expect(myServiceMock.itemClicked).to.equal(0); 
     });

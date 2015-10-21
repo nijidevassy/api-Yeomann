@@ -20,22 +20,10 @@ describe('appCntrl', function () {
   	});
     
     describe('Checking default params',function () {
-      beforeEach(inject(function($controller,$rootScope){
-        scope = $rootScope.$new();
-          appCntrl.username = "company";
-          appCntrl.password = "1234";
-          appCntrl = $controller('appCntrl', {
-          $scope:scope,
-          $location:locationMock,
-        });  
           it("Check whether the login function navigates",function(){
             appCntrl.login();
               expect(locationMock.path.calledOnce)
           })
-        
-          
-         
-      }));
     });
 
     function initMocks($provide) {
@@ -63,6 +51,5 @@ describe('appCntrl', function () {
 	      $scope:scope,
 	      $location:locationMock
 	    });
-        
-	}
+    }
 });
